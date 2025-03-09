@@ -9,8 +9,8 @@ This project demonstrates an **end-to-end Azure Data Engineering pipeline** usin
 - **Azure Databricks & AutoLoader** – Incremental data processing  
 - **Delta Live Tables (DLT)** – Automated and scalable data transformation  
 - **Parameterized Databricks Notebooks** – Dynamic and reusable transformation logic  
-- **Unity Catalog (Databricks)** – **Storage for structured (Gold Layer) datasets**  
-- **Azure Databricks Access Connector** – **Secure access between Databricks and ADLS Gen2**  
+- **Unity Catalog (Databricks)** – Storage for structured (Gold Layer) datasets  
+- **Azure Databricks Access Connector** – Secure access between Databricks and ADLS Gen2  
 - **Azure Key Vault** – Secure credentials management  
 
 ## Process  
@@ -33,9 +33,7 @@ This project demonstrates an **end-to-end Azure Data Engineering pipeline** usin
    ![Delta Live Tables Pipeline](https://github.com/awsjvd/Netflix-Azure-Data-Engineering-Project/blob/main/Databricks/Delta%20Live%20Tables.JPG)  
 
 ### **4. Data Serving using Unity Catalog (Gold Layer)**  
-   - The **final transformed data is not stored in Azure Data Lake Gen2**.  
-   - Instead, it is **stored in Databricks Unity Catalog** for **centralized governance, RBAC security, and optimized querying**.  
-   - This ensures **better integration with Databricks SQL, Delta Sharing, and access management**.  
+   - The **structured and processed data** is stored in **Unity Catalog** to enable **centralized governance, fine-grained access control, and optimized querying**.  
 
 ## **Flow Diagram**  
 The data pipeline follows a structured **Bronze-Silver-Gold** architecture. The detailed **data flow diagram** can be viewed here:  
