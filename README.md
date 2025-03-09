@@ -12,6 +12,8 @@ This project demonstrates an **end-to-end Azure Data Engineering pipeline** usin
 - **Unity Catalog (Databricks)** – Storage for structured (Gold Layer) datasets  
 - **Azure Databricks Access Connector** – Secure access between Databricks and ADLS Gen2  
 - **Azure Key Vault** – Secure credentials management  
+- **Notebook-Based Scheduling** – Conditional execution based on the **7th day of the week**  
+- **Power BI (Planned Enhancement)** – Interactive data visualization and reporting  
 
 ## Process  
 ### **1. Data Ingestion using Azure Data Factory**  
@@ -35,6 +37,14 @@ This project demonstrates an **end-to-end Azure Data Engineering pipeline** usin
 ### **4. Data Serving using Unity Catalog (Gold Layer)**  
    - The **structured and processed data** is stored in **Unity Catalog** to enable **centralized governance, fine-grained access control, and optimized querying**.  
 
+### **5. Scheduling & Conditional Execution (Runs on the 7th Day of the Week)**  
+   - The pipeline includes a **notebook-based conditional scheduling mechanism**.  
+   - A **Weekday Lookup Notebook** checks if the current day is the **7th day of the week**.  
+   - If **True**, the **SilverMasterData** notebook executes.  
+   - If **False**, an alternative notebook **FalseNoteBook** runs.  
+
+   ![Scheduling Workflow](https://github.com/awsjvd/Netflix-Azure-Data-Engineering-Project/blob/main/Scheduling/Scheduling_Diagram.JPG)  
+
 ## **Flow Diagram**  
 The data pipeline follows a structured **Bronze-Silver-Gold** architecture. The detailed **data flow diagram** can be viewed here:  
 
@@ -48,11 +58,13 @@ The data pipeline follows a structured **Bronze-Silver-Gold** architecture. The 
 - **Optimized & Flexible Transformation**  
   - **Parameterized Notebooks** allow dynamic data processing configurations.  
   - **Delta Live Tables (DLT)** automate transformations for **scalability and efficiency**.  
+- **Automated Scheduling & Conditional Execution**  
+  - The **pipeline dynamically determines whether to process Silver data or execute an alternative workflow** based on the **day of the week**.  
 - **Centralized Governance with Unity Catalog**  
   - The **Gold Layer is stored in Unity Catalog**, ensuring **fine-grained access control, schema governance, and Databricks SQL compatibility**.  
 
-## Future Enhancements  
-- Automate pipeline execution using **Azure Data Factory triggers**.  
+## Future Enhancements    
 - Implement **CI/CD with Azure DevOps** for seamless deployment.  
 - Optimize **querying performance** by integrating **Azure Synapse Analytics**.  
 - Extend **Unity Catalog policies** for better governance and security.  
+- **Integrate with Power BI for interactive reporting and dashboards**.  
