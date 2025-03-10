@@ -41,9 +41,7 @@ This project demonstrates an **end-to-end Azure Data Engineering pipeline** usin
    - The pipeline includes a **notebook-based conditional scheduling mechanism**.  
    - A **Weekday Lookup Notebook** checks if the current day is the **7th day of the week**.  
    - If **True**, the **SilverMasterData** notebook executes.  
-   - If **False**, an alternative notebook **FalseNoteBook** runs.  
-
-   ![Scheduling Workflow](https://github.com/awsjvd/Netflix-Azure-Data-Engineering-Project/blob/main/Scheduling/Scheduling_Diagram.JPG)  
+   - If **False**, an alternative notebook **FalseNoteBook** runs.   
 
 ## **Flow Diagram**  
 The data pipeline follows a structured **Bronze-Silver-Gold** architecture. The detailed **data flow diagram** can be viewed here:  
