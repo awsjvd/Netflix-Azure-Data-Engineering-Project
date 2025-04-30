@@ -32,7 +32,8 @@ This project demonstrates an **end-to-end Azure Data Engineering pipeline** usin
    - The raw data from the **Bronze Layer** is cleansed, transformed, and stored in the **Silver Layer** of **Azure Data Lake Gen2**.  
    - **Delta Live Tables (DLT)** ensure **automated, scalable, and fault-tolerant transformations**.  
 
-   ![Delta Live Tables Pipeline]([https://github.com/awsjvd/Netflix-Azure-Data-Engineering-Project/blob/main/Databricks/Delta%20Live%20Tables.JPG](https://github.com/awsjvd/Netflix-Azure-Data-Engineering-Project/blob/main/Databricks/Delta%20Live%20Tables.JPG))  
+   ![Delta Live Tables Pipeline](https://github.com/awsjvd/Netflix-Azure-Data-Engineering-Project/blob/main/Databricks/Delta%20Live%20Tables.JPG)
+
 
 ### **4. Data Serving using Unity Catalog (Gold Layer)**  
    - The **structured and processed data** is stored in **Unity Catalog** to enable **centralized governance, fine-grained access control, and optimized querying**.  
